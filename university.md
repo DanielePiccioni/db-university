@@ -24,3 +24,8 @@ COlumns:
 - corsi_insegnanti
 - studenti
 - iscrizioni_appelli
+
+# dipartimenti
+
+- id
+- nome
