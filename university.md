@@ -62,3 +62,9 @@ COlumns:
 - matricola
 - email
 - id_corso_laurea
+
+# iscrizioni_appelli
+
+- id_studente
+- id_appello
+- voto
