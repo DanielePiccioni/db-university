@@ -53,3 +53,12 @@ COlumns:
 
 -id_corso
 - id_insegnante
+
+# studenti
+
+- id
+- nome
+- cognome
+- matricola
+- email
+- id_corso_laurea
