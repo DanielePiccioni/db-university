@@ -41,3 +41,10 @@ COlumns:
 - id
 - nome
 - id_corso_laurea
+
+# insegnanti
+
+- id
+- nome
+- cognome
+- email
