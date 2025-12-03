@@ -13,4 +13,14 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 Utilizzare https://www.drawio.com/ per la creazione dello schema.
 Esportare quindi il diagramma in jpg e caricarlo nella repo.
 
+# Table name : università (entity name: istruzione)
 
+COlumns:
+
+- dipartimenti
+- corsi_di_laurea
+- corsi
+- insegnanti
+- corsi_insegnanti
+- studenti
+- iscrizioni_appelli
