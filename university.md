@@ -35,3 +35,9 @@ COlumns:
 - di
 - nome
 - id_dipartimento
+
+# corsi
+
+- id
+- nome
+- id_corso_laurea
