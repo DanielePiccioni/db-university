@@ -22,6 +22,7 @@ COlumns:
 - corsi
 - insegnanti
 - corsi_insegnanti
+- appelli_esame
 - studenti
 - iscrizioni_appelli
 
@@ -53,6 +54,13 @@ COlumns:
 
 -id_corso
 - id_insegnante
+
+# appelli_esame
+
+- id
+- data_appello
+- aula
+- id_corso
 
 # studenti
 
