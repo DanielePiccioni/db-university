@@ -48,3 +48,8 @@ COlumns:
 - nome
 - cognome
 - email
+
+# corsi_insegnanti
+
+-id_corso
+- id_insegnante
