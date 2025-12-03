@@ -26,53 +26,70 @@ COlumns:
 - studenti
 - iscrizioni_appelli
 
+
 # dipartimenti
 
-- id
-- nome
+- id  BIGINT PK NOTNULL
+- nome VARCHAR(100) NOTNULL
+- created_at DATETIME NOT NULL DEFAULT NOW()
+- updated_at DATETIME NOT NULL DEFAULT NOW()
 
 # corsi_di_laurea
 
-- di
-- nome
-- id_dipartimento
+- id BIGINT PK NOTNULL
+- nome VARCHAR(100) NOTNULL
+- id_dipartimento BIGINT NOTNULL
+- created_at DATETIME NOT NULL DEFAULT NOW()
+- updated_at DATETIME NOT NULL DEFAULT NOW()
 
 # corsi
 
-- id
-- nome
-- id_corso_laurea
+- id BIGINT PK NOTNULL
+- nome VARCHAR(100) NOTNULL
+- id_corso_laurea BIGINT NOTNULL
+- created_at DATETIME NOT NULL DEFAULT NOW()
+- updated_at DATETIME NOT NULL DEFAULT NOW()
 
 # insegnanti
 
-- id
-- nome
-- cognome
-- email
+- id BIGINT PK NOTNULL
+- nome VARCHAR(50) NOTNULL
+- cognome VARCHAR(50) NOTNULL
+- email  VARCHAR(100) NULL UNIQUE
+- created_at DATETIME NOT NULL DEFAULT NOW()
+- updated_at DATETIME NOT NULL DEFAULT NOW()
 
 # corsi_insegnanti
 
--id_corso
-- id_insegnante
+- id_corso  BIGINT NOTNULL
+- id_insegnante BIGINT NOTNULL
+- created_at DATETIME NOT NULL DEFAULT NOW()
+- updated_at DATETIME NOT NULL DEFAULT NOW()
 
 # appelli_esame
 
-- id
-- data_appello
-- aula
-- id_corso
+- id BIGINT PK NOTNULL
+- data_appello DATETIME NOTNULL
+- aula VARCHAR(50) NULL
+- id_corso BIGINT NOTNULL
+- created_at DATETIME NOT NULL DEFAULT NOW()
+- updated_at DATETIME NOT NULL DEFAULT NOW()
 
 # studenti
 
-- id
-- nome
-- cognome
-- matricola
-- email
-- id_corso_laurea
+- id BIGINT PK NOTNULL
+- nome VARCHAR(50)NOTNULL
+- cognome VARCHAR(50) NOTNULL
+- matricola VARCHAR(20) NOTNULL UNIQUE
+- email VARCHAR(100) NULL UNIQUE
+- id_corso_laurea BIGINT NOTNULL
+- created_at DATETIME NOT NULL DEFAULT NOW()
+- updated_at DATETIME NOT NULL DEFAULT NOW()
 
 # iscrizioni_appelli
 
-- id_studente
-- id_appello
-- voto
+- id_studente BIGINT PK NOTNULL
+- id_appello BIGINT PK NOTNULL
+- voto TINYINT NULL
+- created_at DATETIME NOT NULL DEFAULT NOW()
+- updated_at DATETIME NOT NULL DEFAULT NOW()
