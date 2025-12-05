@@ -18,9 +18,17 @@ AND degrees.level = "Magistrale"*/
 #3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
 #coursesm course_teacher
 
-SELECT courses.id, courses.name, courses.year, courses.cfu
+/*SELECT courses.id, courses.name, courses.year, courses.cfu
 FROM courses
 JOIN course_teacher ON courses.id = course_teacher.course_id
-WHERE course_teacher.teacher_id = 44;
+WHERE course_teacher.teacher_id = 44;*/
 
+#4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome
+#students, degree, department
+
+SELECT students.id, students.name, students.surname, degrees.name AS degree_name, departments.name AS department_name
+FROM students
+JOIN degrees ON students.degree_id = degrees.id
+JOIN departments ON degrees.department_id = departments.id
+ORDER BY students.surname, students.name;
 
